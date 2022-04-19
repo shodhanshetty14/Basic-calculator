@@ -12,7 +12,3 @@ def div(a, b):
 
 def multiply(a, b):
     return a*b
-
-
-# def tan(a):
-#     return math.tan(a)
