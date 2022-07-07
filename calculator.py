@@ -6,9 +6,16 @@ while True:
     try:
         a = int(a)
     except:
-        print("Enter a valid datatype")
+        a = str(a)
+        if a.lower() == 'stop':
+            print('Program terminated')
+            quit()
+        
         break
     op = input("Enter a valid operator: ")
+    if op.lower() == 'stop' or a.lower() == 'stop':
+        print('Program terminated')
+        quit()
     b = input("Enter the value of 'b': ")
     try:
         b = int(b)
@@ -18,7 +25,7 @@ while True:
     if op == '+':
         answer = cal.add(a, b)
         print(f"The answer is{answer}")
-    elif op.lower() == 'stop':
+    elif op.lower() == 'stop' or a.lower() == 'stop':
         print('Program terminated')
         quit()
     elif op == '-':
